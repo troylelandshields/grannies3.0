@@ -73,8 +73,15 @@ sensor speedtest:
       - download
       - upload
 
+device_tracker:
+  - platform: netgear
+    host: 192.168.1.1
+    username: !secret netgear_username
+    password: !secret netgear_password
+    track_new_devices: false
+
 # Apple TV
-#media_player appletv:
-#  - platform: apple_tv
-#    host: 192.168.1.21
-#    login_id: !secret appletv_login_id
+media_player appletv:
+  - platform: apple_tv
+    host: 192.168.1.21
+    login_id: !secret appletv_login_id
